@@ -1,6 +1,6 @@
-# Write a Brief Descriptive Title Here
+# FORECASTING OF ORDER DEMAND IN WAREHOUSE USING AUTOREGRESSIVE INTEGRATED MOVING AVERAGE
 
-Authors:  **Name 1**, **Name 2**, etc.
+Authors:  **VIJAY GANESH SRINIVASAN**, **SOHIT REDDY KALLURU**, **RAMAKRISHNA POLEPEDDI**.
 
 YouTube Video:  [Link](http://your_link_goes_here)
 
