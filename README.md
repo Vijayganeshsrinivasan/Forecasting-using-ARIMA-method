@@ -105,11 +105,7 @@ from statsmodels.tsa.stattools import acf, pacf
 from statsmodels.tsa.arima_model import ARIMA
 import warnings
 import itertools
-import pandas as pd
-import numpy as np
 import statsmodels.api as sm
-import matplotlib.pyplot as plt
-import matplotlib.pyplot as plt
 import matplotlib.pylab as pylab
 ```
 - To set the figure size for all the plots together you can use the following code
