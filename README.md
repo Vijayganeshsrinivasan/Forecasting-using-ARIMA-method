@@ -185,6 +185,98 @@ for i in range(0, len(Warehouse)):
 ![Image of Plot](https://github.com/IE-555/final-project-arima_forecasting_team/blob/master/images/WH_S.png)
 ![Image of Plot](https://github.com/IE-555/final-project-arima_forecasting_team/blob/master/images/WH_C.png)
 
+---
+
+### Writing functions for different Warehouses
+
+- The function is written to consolidate all the warehouses demand and order demand.
+
+```
+def diff_warehouse(Whse_A):
+  
+    #SCALING THE ORDER DEMAND
+    
+    WH_A=pd.DataFrame(DataFrame[DataFrame['Warehouse']== Whse_A]) #EXTRACTING A SPECIFIC WAREHOUSE
+    cols_to_norm = ['Order_Demand'] #SCALING
+    WH_A[cols_to_norm] = WH_A[cols_to_norm].apply(lambda x: (x - x.min()) / (x.max() - x.min())) #SCALING
+    WH_A.sort_values(by='Pandas_Datestamp')
+
+
+    #SEPARATING AS PER YEAR
+    WH_A_2012=WH_A[WH_A['Year']==2012]
+    WH_A_2012['Month'] = WH_A_2012['Pandas_Datestamp'].apply(lambda x: x.strftime('%Y-%m-01')) #FIRST DAY OF EVERY MONTH 
+    WH_A_2012=pd.DataFrame(WH_A_2012.groupby('Month', as_index=False)['Order_Demand'].mean())
+    WH_A_2012.sort_values(by='Month')
+    
+    #CONCATENATION
+
+    WH_A_ALLYEARS = pd.concat([WH_A_2012,WH_A_2013,WH_A_2014,WH_A_2015,WH_A_2016]).reset_index(drop=True) #, axis=1
+    WH_A_ALLYEARS.index = WH_A_ALLYEARS['Month']
+    WH_A_ALLYEARS.drop(columns='Month')
+    WH_A_ALLYEARS= WH_A_ALLYEARS.drop(columns='Month')
+    WH_A_ALLYEARS.reset_index(inplace=True)
+    WH_A_ALLYEARS['Month'] = pd.to_datetime(WH_A_ALLYEARS['Month'])
+    WH_A_ALLYEARS = WH_A_ALLYEARS.set_index('Month')
+    
+  ```
+  - In the next hald of the function the moving average is calculated. ARIMA methodology also allows models to be built that incorporate both autoregressive and moving average parameters together. So that we calculate moving average too, or in python langauge we calculate rolling average for all the years in the same function.
+  
+  ```
+   #ROLLING AVERGAGE FORMULA - TRIAL WITH MOVING WINDOW
+    WH_A_ALLYEARS['MA_3']= WH_A_ALLYEARS.Order_Demand.rolling(3).mean()
+    WH_A_ALLYEARS['MA_3_std']= WH_A_ALLYEARS.Order_Demand.rolling(3).std() #QUATERLY
+    WH_A_ALLYEARS['Warehouse'] = Whse_A
+    return WH_A_ALLYEARS
+   ```
+   ### Graphical representation of each and every warehouse demand in time series model
+   
+   - To get a clear idea on the time series model we plot all the warehouse details in the based on the years and order demand.
+   - There are lots of functions written in this project to avoid the number of steps and computation time.
+   
+   ```
+   def Plot_Original(WH_A_ALLYEARS):
+    Actual1 = go.Scatter(x=WH_A_ALLYEARS.index, y=WH_A_ALLYEARS.Order_Demand, mode = 'lines+markers',name = 'Actual')
+    MA_3 = go.Scatter(x=WH_A_ALLYEARS.index, y=WH_A_ALLYEARS.MA_3, mode = 'lines+markers',name = '3-PERIOD MOVING AVERAGE')
+    MA_3_std = go.Scatter(x=WH_A_ALLYEARS.index, y=WH_A_ALLYEARS.MA_3_std, mode = 'lines+markers',name = '3-PERIOD MOVING STANDARD DEVIATION')
+    data1= [Actual1, MA_3, MA_3_std]
+    layout = go.Layout(
+    title='Order Demand for ' + Warehouse[i],
+    xaxis=dict(
+        title='Years',
+        titlefont=dict(
+            family='Courier New, monospace',
+            size=18,
+            color='#7f7f7f'
+        )
+    ),
+    yaxis=dict(
+        title='Order Demand',
+        titlefont=dict(
+            family='Courier New, monospace',
+            size=18,
+            color='#7f7f7f'
+        )
+    )
+)
+    plot_2 = go.Figure(data=data1, layout=layout)
+   # plot_image = py.plot(plot_2, filename='styling-names')
+    return plot(plot_2, filename='styling-names')
+   for i in range(0,len(Warehouse)):
+    print Plot_Original(diff_warehouse(Warehouse[i])) 
+   ```
+
+
+![Image of Plot](https://github.com/IE-555/final-project-arima_forecasting_team/blob/master/images/Order_Demand_Whse_A.png)
+![Image of Plot](https://github.com/IE-555/final-project-arima_forecasting_team/blob/master/images/Order_Demand_Whse_J.png)
+![Image of Plot](https://github.com/IE-555/final-project-arima_forecasting_team/blob/master/images/Order_Demand_Whse_S.png)
+![Image of Plot](https://github.com/IE-555/final-project-arima_forecasting_team/blob/master/images/Order_Demand_Whse_C.png)
+
+
+
+   
+  
+    
+- 
 ## References
 *In this section, provide links to your references and data sources.  For example:*
 - Source code was adapted from [the magic source code farm](http://www.amagicalnonexistentplace.com)
