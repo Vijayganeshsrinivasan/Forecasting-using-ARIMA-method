@@ -14,8 +14,9 @@ Book by Peter J. Brockwell and Richard A. Davis, Production and Operations Analy
 
 ## FORECASTING
 
-![Image of Plot](https://github.com/IE-555/final-project-arima_forecasting_team/tree/master/images/Forecasting_Title_Image.png)
+![Image of Plot](https://github.com/IE-555/final-project-arima_forecasting_team/blob/master/images/Forecasting_Title_Image.PNG)
 ---
+
 
 ## Project outline
 - The objective of the project is to forecast the order demand using AUTOREGRESSIVE INTEGRATED MOVING AVERAGE model for 4 warehouses respectively.
