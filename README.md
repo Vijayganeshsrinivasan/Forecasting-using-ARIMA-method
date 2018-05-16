@@ -9,15 +9,11 @@ YouTube Video:  [Link](http://your_link_goes_here)
 **NOTE**:  For more details on the statistical understanding of the project kindly read *Introduction to time series and forecasting
 Book by Peter J. Brockwell and Richard A. Davis, Production and Operations Analysis by Steven Nahmias and Supply Chain Engineering: Models and Applications by A. Ravi Ravindran, Donald P. Warsing, Jr.* 
 
-
 ---
-
 ## FORECASTING
-
 ![Image of Plot](https://github.com/IE-555/final-project-arima_forecasting_team/blob/master/images/Forecasting_Title_Image.PNG)
+
 ---
-
-
 ## Project outline
 - The objective of the project is to forecast the order demand using AUTOREGRESSIVE INTEGRATED MOVING AVERAGE model for 4 warehouses respectively.
 - For this analysis we have downloaded the data from Kaggle. (https://www.kaggle.com/felixzhao/productdemandforecasting/data)
@@ -59,9 +55,12 @@ plotly.tools.set_credentials_file(username='MyAccount', api_key='********')
 ## 5 Steps towards Forecasting
 
 ![Image of Plot](https://github.com/IE-555/final-project-arima_forecasting_team/blob/master/images/5_Steps_Towards_Forecasting.PNG)
+
 ---
 
 ## Introduction to ARIMA
+
+---
 
 - ARIMA is a forecasting technique. ARIMA– Auto Regressive Integrated Moving Average the key tool in Time Series Analysis.
 - Models that relate the present value of a series to past values and past prediction errors - these are called ARIMA models.
@@ -80,6 +79,8 @@ plotly.tools.set_credentials_file(username='MyAccount', api_key='********')
 ---
 
 ### Code summary
+
+---
 
 ![Image of Plot](https://github.com/IE-555/final-project-arima_forecasting_team/blob/master/images/Steps_ARIMA_FORECASTING.PNG)
 
@@ -484,11 +485,12 @@ print '\n\n\n',results.summary()
 ![Image of Plot](https://github.com/IE-555/final-project-arima_forecasting_team/blob/master/images/FC_WA_J.PNG)
 ![Image of Plot](https://github.com/IE-555/final-project-arima_forecasting_team/blob/master/images/FC_S_1.PNG)
 
+---
 
-
-
-- 
 ## References
+
+---
+
 *The references are given in the structure of program.*
 - Kindly [watch this Youtube video](https://www.youtube.com/watch?v=Aw77aMLj9uM) to know how ARIMA works.
 - For primary data analysis [click here](https://www.bigskyassociates.com/blog/bid/372186/The-Data-Analysis-Process-5-Steps-To-Better-Decision-Making)
@@ -506,26 +508,45 @@ print '\n\n\n',results.summary()
 - To know about `groupby` and finding mean [click here](https://stackoverflow.com/questions/30482071/how-to-calculate-mean-values-grouped-on-another-column-in-pandas)
 - **To know how to use offline plots in plotly [click here](https://stackoverflow.com/questions/35315726/visualize-plotly-charts-in-spyder)**
 - To learn about moving average [click here](https://www.investopedia.com/ask/answers/013015/what-are-main-advantages-and-disadvantages-using-simple-moving-average-sma.asp)
-- For more information [contact](vs58@buffalo.edu) us.
-
-
-
-## How to Run the Code
-*Provide step-by-step instructions for running the code.  For example, I like to run code from the terminal:*
-1. Ensure that you have registered for the [insert name of API] API key.  (You may reference the instructions for doing this.)
-
-2. Ensure that you have installed necessary Python packages. (Again, you may include a reference here to a prior section in the README that provides the instructions.)
-
-
-2. Open a terminal window.
-
-2. Change directories to where `needs_a_good_name.py` is saved.
-
-3. Type the following command:
-	```
-	python needs_a_good_name.py
-	```
-
-- *NOTE: You are welcome to provide instructions using Anaconda, IPython, or Jupyter notebooks.*
 
 ---
+
+## How to Run the Code
+
+---
+
+*In this tutorial we are running the codes in Jupyter environment*
+
+1. As mentioned in the very beginning step kindly register in plotly for username and API key as per the instructions given in the website and in our documentation.
+
+2. Ensure that you have installed necessary Python packages. (Most of the packages except plotly are pre-installed packages. Kindly verify whether you have those packages)
+
+3. Download the .ipynb file and store it in the Jupyter working directory.
+
+4. Download the dataset in .csv format from the link provided and store it in the same directory where .ipynb file is stored.
+
+5. You can run each and every cell separately in the python notebook file and obtain the output or you can run the whole python program using `run` command in Jupyter.
+
+`run FINAL_FORECASTING.py`
+
+---
+
+## Why this project is good
+
+---
+
+- When it comes to ARIMA forecasting not all material available on internet is for Python. Many are for R. This documentation is covers the whole concept of ARIMA starting from the basics to the advanced level for Python environment.
+- References are provided in such a way that there won't be any need for you to refer any other links or websites other than this documentation
+- Nearly we deal with more than 1 million data in Pandas dataframe efficiently using the functions built for certain tasks.
+- Last but not least we have provided a way to save the plots offline.
+
+---
+
+## Suggestions
+
+---
+
+- Since the dataset includes 4 warehouse locations, if there are location coordinates provided for warehouse we can plot them in the map and predict the demand based on the location.
+- This could be extended to the suppliers and customers involved with the 4 warehouses and their product demands. If customer-A wants to buy a product or stock a product, based on the existing forecast data, location we can provide which warehouse would be better option.
+- This could be further extended to Q,R model to predict the re-order point and EOQ for the inventory storage.
+- If we have the customer data we can build ABC or continous review model. 
