@@ -83,6 +83,8 @@ plotly.tools.set_credentials_file(username='MyAccount', api_key='********')
 
 ![Image of Plot](https://github.com/IE-555/final-project-arima_forecasting_team/blob/master/images/Steps_ARIMA_FORECASTING.PNG)
 
+- The flow of the program is excuted in 2 ways.
+- One is as per the flow chart and the alternative one is by using Auto Arima algorithm which is pre-installed package in Anaconda Python.
 - The uploaded code is excuted in the Jupyter environment. 
 - Kindly as mentioned above install the packages required to run the program.
 
@@ -137,6 +139,50 @@ DataFrame.sort_values(by='Pandas_Datestamp')
 #CHANGING STRING TO NUMERIC
 DataFrame.Order_Demand = pd.to_numeric(DataFrame['Order_Demand'], errors='coerce')
 ```
+### Data visualization
+
+- The below code runs in a `for` loop where for all the 4 warehouse the graphs are plotted using plotly interactive plots.
+- This is one of the easy way to use the facility of `sub plots` provided by the plotly. 
+- **Only the snippet of code is given. Kindly refer .ipynb file or .py file for elaborate explanation** 
+
+```
+from plotly import tools
+import plotly.plotly as py
+import plotly.graph_objs as go
+for i in range(0, len(Warehouse)):
+    WH_S=pd.DataFrame(DataFrame[DataFrame['Warehouse']== Warehouse[i]])
+    WH_S_2012=WH_S[WH_S['Year']==2012]
+    WH_S_2012=pd.DataFrame(WH_S.groupby('Product_Category', as_index=False)['Order_Demand'].mean())
+    WH_S_2012= WH_S_2012.sort_values('Order_Demand', ascending=False)
+    trace1 = go.Bar(x=WH_S_2012['Product_Category'],  y=WH_S_2012['Order_Demand'], name='Year_2012')
+    trace2 = go.Bar(x=WH_S_2013['Product_Category'],  y=WH_S_2013['Order_Demand'], name='Year_2013')
+    trace3 = go.Bar(x=WH_S_2014['Product_Category'],  y=WH_S_2014['Order_Demand'], name='Year_2014')
+    fig = tools.make_subplots(rows=2, cols=5)
+    fig.append_trace(trace3, 1, 3)
+    fig.append_trace(trace2, 1, 4)
+    fig.append_trace(trace1, 1, 5)
+    fig['layout'].update(height=500, width=1200, title='Order demand vs product category with respect to all years for '+ str (Warehouse[i]),xaxis=dict(
+        title='Product Category',
+        titlefont=dict(
+            family='Courier New, monospace',
+            size=18,
+            color='#7f7f7f'
+        )
+    ),
+    yaxis=dict(
+        title='Order Demand',
+        titlefont=dict(
+            family='Courier New, monospace',
+            size=18,
+            color='#7f7f7f')))
+    py.iplot(fig, filename='stacked-subplots', layout=layout)
+    plot(fig, filename='stacked-subplots')
+  ```
+![Image of Plot](https://github.com/IE-555/final-project-arima_forecasting_team/blob/master/images/Steps_ARIMA_FORECASTING.PNG)
+![Image of Plot](https://github.com/IE-555/final-project-arima_forecasting_team/blob/master/images/Steps_ARIMA_FORECASTING.PNG)
+![Image of Plot](https://github.com/IE-555/final-project-arima_forecasting_team/blob/master/images/Steps_ARIMA_FORECASTING.PNG)
+![Image of Plot](https://github.com/IE-555/final-project-arima_forecasting_team/blob/master/images/Steps_ARIMA_FORECASTING.PNG)
+![Image of Plot](https://github.com/IE-555/final-project-arima_forecasting_team/blob/master/images/Steps_ARIMA_FORECASTING.PNG)
 ## References
 *In this section, provide links to your references and data sources.  For example:*
 - Source code was adapted from [the magic source code farm](http://www.amagicalnonexistentplace.com)
