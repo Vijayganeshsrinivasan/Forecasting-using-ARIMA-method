@@ -180,18 +180,10 @@ for i in range(0, len(Warehouse)):
 
 ```
 
-![Image of Plot](https://github.com/IE-555/final-project-arima_forecasting_team/blob/master/images/WH_A.PNG)
-
-
 ![Image of Plot](https://github.com/IE-555/final-project-arima_forecasting_team/blob/master/images/WH_A.png)
-
-![Image of Plot](https://github.com/IE-555/final-project-arima_forecasting_team/blob/master/images/WH_A.PNG)
-
-![Image of Plot](https://github.com/IE-555/final-project-arima_forecasting_team/blob/master/images/WH_J.PNG)
-
-![Image of Plot](https://github.com/IE-555/final-project-arima_forecasting_team/blob/master/images/WH_S.PNG)
-
-![Image of Plot](https://github.com/IE-555/final-project-arima_forecasting_team/blob/master/images/WH_C.PNG)
+![Image of Plot](https://github.com/IE-555/final-project-arima_forecasting_team/blob/master/images/WH_J.png)
+![Image of Plot](https://github.com/IE-555/final-project-arima_forecasting_team/blob/master/images/WH_S.png)
+![Image of Plot](https://github.com/IE-555/final-project-arima_forecasting_team/blob/master/images/WH_C.png)
 
 ## References
 *In this section, provide links to your references and data sources.  For example:*
