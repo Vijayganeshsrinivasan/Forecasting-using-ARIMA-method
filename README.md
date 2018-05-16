@@ -312,10 +312,12 @@ for i in range(0,len(Warehouse)):
     
  ```
 
-![Image of Plot](https://github.com/IE-555/final-project-arima_forecasting_team/blob/master/images/Order_Demand_Whse_A.PNG)
-![Image of Plot](https://github.com/IE-555/final-project-arima_forecasting_team/blob/master/images/Order_Demand_Whse_J.PNG)
-![Image of Plot](https://github.com/IE-555/final-project-arima_forecasting_team/blob/master/images/Order_Demand_Whse_S.PNG)
-![Image of Plot](https://github.com/IE-555/final-project-arima_forecasting_team/blob/master/images/Order_Demand_Whse_C.PNG)
+![Image of Plot](https://github.com/IE-555/final-project-arima_forecasting_team/blob/master/images/DF_A.PNG)
+![Image of Plot](https://github.com/IE-555/final-project-arima_forecasting_team/blob/master/images/DF_J.PNG)
+![Image of Plot](https://github.com/IE-555/final-project-arima_forecasting_team/blob/master/images/DF_C.PNG)
+![Image of Plot](https://github.com/IE-555/final-project-arima_forecasting_team/blob/master/images/DF_S.PNG)
+
+- From the Dickey-Fuller test we can say that for warehouse S, there is trend and seasonality since the p-value is greater than 0.05 (the test statistic is more than the critical value). So we have to use the decompose function from the statistics library to perform this operation.
     
    
   
