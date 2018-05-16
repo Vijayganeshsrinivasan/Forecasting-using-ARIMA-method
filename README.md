@@ -266,10 +266,10 @@ def diff_warehouse(Whse_A):
    ```
 
 
-![Image of Plot](https://github.com/IE-555/final-project-arima_forecasting_team/blob/master/images/Order_Demand_Whse_A.png)
-![Image of Plot](https://github.com/IE-555/final-project-arima_forecasting_team/blob/master/images/Order_Demand_Whse_J.png)
-![Image of Plot](https://github.com/IE-555/final-project-arima_forecasting_team/blob/master/images/Order_Demand_Whse_S.png)
-![Image of Plot](https://github.com/IE-555/final-project-arima_forecasting_team/blob/master/images/Order_Demand_Whse_C.png)
+![Image of Plot](https://github.com/IE-555/final-project-arima_forecasting_team/blob/master/images/Order_Demand_Whse_A.PNG)
+![Image of Plot](https://github.com/IE-555/final-project-arima_forecasting_team/blob/master/images/Order_Demand_Whse_J.PNG)
+![Image of Plot](https://github.com/IE-555/final-project-arima_forecasting_team/blob/master/images/Order_Demand_Whse_S.PNG)
+![Image of Plot](https://github.com/IE-555/final-project-arima_forecasting_team/blob/master/images/Order_Demand_Whse_C.PNG)
 
 
 
