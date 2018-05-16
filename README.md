@@ -408,7 +408,7 @@ for i in range(0,len(Warehouse)):
 - AIC= 2k-2ln(L) where, k corresponds to the number of estimated parameters in the model and L refers to the maximum value of the likelihood function for the model.
 - If the values of AIC and BIC are minimum then we select those values of (p, d, q) (P, D, Q)m.
 
-**Seasonal Auto Integrated Moving Average**
+**Seasonal Autoregressive Integrated Moving Average**
 
 ```
 mod = sm.tsa.statespace.SARIMAX(train.Order_Demand, trend='n', order=order_in , seasonal_order=seasonal_order_in,enforce_invertibility=False)
