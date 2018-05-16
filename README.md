@@ -60,13 +60,24 @@ plotly.tools.set_credentials_file(username='MyAccount', api_key='********')
 
 ![Image of Plot](https://github.com/IE-555/final-project-arima_forecasting_team/blob/master/images/5_Steps_Towards_Forecasting.PNG)
 ---
+
 ## Introduction to ARIMA
 
 - ARIMA is a forecasting technique. ARIMA– Auto Regressive Integrated Moving Average the key tool in Time Series Analysis.
 - Models that relate the present value of a series to past values and past prediction errors - these are called ARIMA models.
-- The AR part of ARIMA indicates that the evolving variable of interest is regressed on its own lagged (i.e., prior) values. The MA part indicates that the regression error is actually a linear combination of error terms whose values occurred contemporaneously and at various times in the past. The I (for "integrated") indicates that the data values have been replaced with the difference between their values and the previous values (and this differencing process may have been performed more than once). The purpose of each of these features is to make the model fit the data as well as possible.(Wikipedia)
+- ARIMA models provide an approach to time series forecasting. 
+- ARIMA is a forecasting technique that projects the future values of a series based entirely on its own inertia.
+- Exponential smoothing and ARIMA models are the two most widely-used approaches to time series forecasting. 
+- Exponential smoothing models are based on a description of trend and seasonality in the data, ARIMA models aim to describe the autocorrelations in the data.
+- Its main application is in the area of short term forecasting requiring at least 40 historical data points. 
+- It works best when your data exhibits a stable or consistent pattern over time with a minimum amount of outliers.
+- ARIMA is usually superior to exponential smoothing techniques when the data is reasonably long and the correlation between past observations is stable.
 
-## 
+--- 
+
+## Program explanation
+
+### Code summary
 
 ## References
 *In this section, provide links to your references and data sources.  For example:*
