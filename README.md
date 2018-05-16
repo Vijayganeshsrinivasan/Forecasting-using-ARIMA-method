@@ -14,7 +14,7 @@ Book by Peter J. Brockwell and Richard A. Davis, Production and Operations Analy
 
 ## FORECASTING
 
-![Image of Plot](images/Forecasting_Title_Image.png)
+![Image of Plot](https://github.com/IE-555/final-project-arima_forecasting_team/tree/master/images/Forecasting_Title_Image.png)
 ---
 
 ## Project outline
