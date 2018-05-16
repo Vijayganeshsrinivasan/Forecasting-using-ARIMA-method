@@ -489,9 +489,9 @@ print '\n\n\n',results.summary()
 
 - 
 ## References
-*The references are given in the structure of program.
+*The references are given in the structure of program.*
 - Kindly [watch this Youtube video](https://www.youtube.com/watch?v=Aw77aMLj9uM) to know how ARIMA works.
-- For primary data analysis [click here].(https://www.bigskyassociates.com/blog/bid/372186/The-Data-Analysis-Process-5-Steps-To-Better-Decision-Making)
+- For primary data analysis [click here](https://www.bigskyassociates.com/blog/bid/372186/The-Data-Analysis-Process-5-Steps-To-Better-Decision-Making)
 - On the information of how to clean the data [click here](http://chi2innovations.com/blog/discover-data-blog-series/how-clean-your-data-quickly-5-steps/)
 - To learn about basic data pre-processing [click here](http://iasri.res.in/ebook/win_school_aa/notes/Data_Preprocessing.pdf)
 - To learn the statistical concepts of time series and forecasting [click here](https://www.researchgate.net/file.PostFileLoader.html?id=55502f915f7f71d7a68b45df&assetKey=AS%3A273774321045510%401442284292820)
@@ -506,7 +506,7 @@ print '\n\n\n',results.summary()
 - To know about `groupby` and finding mean [click here](https://stackoverflow.com/questions/30482071/how-to-calculate-mean-values-grouped-on-another-column-in-pandas)
 - **To know how to use offline plots in plotly [click here]**(https://stackoverflow.com/questions/35315726/visualize-plotly-charts-in-spyder)
 - To learn about moving average [click here](https://www.investopedia.com/ask/answers/013015/what-are-main-advantages-and-disadvantages-using-simple-moving-average-sma.asp)
-- 
+- For more information [contact](vs58@buffalo.edu) us.
 
 
 
