@@ -327,7 +327,7 @@ Dickey-Fuller test for S warehouse
 ![Image of Plot](https://github.com/IE-555/final-project-arima_forecasting_team/blob/master/images/General_Explanation.PNG)
 
 
-**Above image courtesy: https://anomaly.io/seasonal-trend-decomposition-in-r/
+**Above image courtesy: https://anomaly.io/seasonal-trend-decomposition-in-r/**
 
 
 
