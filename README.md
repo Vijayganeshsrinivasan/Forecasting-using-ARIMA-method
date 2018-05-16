@@ -1,4 +1,4 @@
-# FORECASTING OF ORDER DEMAND IN WAREHOUSES USING AUTOREGRESSIVE INTEGRATED MOVING AVERAGE
+# Forecasting of order demand in warehouses using autoregressive integrated moving average.
 
 Authors:  **VIJAY GANESH SRINIVASAN**, **SOHIT REDDY KALLURU**, **RAMAKRISHNA POLEPEDDI**.
 
