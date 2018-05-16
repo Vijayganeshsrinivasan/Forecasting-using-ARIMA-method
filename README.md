@@ -6,7 +6,7 @@ YouTube Video:  [Link](http://your_link_goes_here)
 
 ---
 
-**NOTE**:  The *italicized* content below is for your reference only.  Please remove these comments before submitting.
+**NOTE**:  For more details on the statistical  
 
 
 ---
