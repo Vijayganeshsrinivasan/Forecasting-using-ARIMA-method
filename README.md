@@ -77,10 +77,66 @@ plotly.tools.set_credentials_file(username='MyAccount', api_key='********')
 
 ## Program explanation
 
+---
+
 ### Code summary
 
 ![Image of Plot](https://github.com/IE-555/final-project-arima_forecasting_team/blob/master/images/Steps_ARIMA_FORECASTING.PNG)
 
+- The uploaded code is excuted in the Jupyter environment. 
+- Kindly as mentioned above install the packages required to run the program.
+
+---
+
+### Packages to import in Python before running the program
+
+```
+import pandas as pd
+import matplotlib.pyplot as plt
+import plotly.plotly as py
+import plotly.graph_objs as go
+from plotly.offline import download_plotlyjs, init_notebook_mode,  plot
+from statsmodels.tsa.stattools import adfuller
+import numpy as np
+import math
+from statsmodels.tsa.stattools import acf, pacf
+from statsmodels.tsa.arima_model import ARIMA
+import warnings
+import itertools
+import pandas as pd
+import numpy as np
+import statsmodels.api as sm
+import matplotlib.pyplot as plt
+import matplotlib.pyplot as plt
+import matplotlib.pylab as pylab
+```
+- To set the figure size for all the plots together you can use the following code
+
+```
+params = {'legend.fontsize': 'xx-large',
+          'figure.figsize': (15, 10),
+         'axes.labelsize': 'xx-large',
+         'axes.titlesize':'xx-large',
+         'xtick.labelsize':'xx-large',
+         'ytick.labelsize':'xx-large'}
+
+pylab.rcParams.update(params)
+```
+- To perform time series operations easily we are changing the normal date format from the csv file to Pandas Datestamp.
+
+```
+DataFrame=pd.read_csv('Historical Product Demand.csv')
+DataFrame['Pandas_Datestamp'] = pd.to_datetime(DataFrame['Date'], infer_datetime_format=True)
+DataFrame['Year'] = pd.DatetimeIndex(DataFrame['Date']).year
+DataFrame['Month'] = pd.DatetimeIndex(DataFrame['Date']).month
+DataFrame.sort_values(by='Pandas_Datestamp')
+```
+- In the Pandas world 'obj' data type is nothing but string. This is one of the challenges we faced. `pd.to_numeric` is the command used to change the column of dataframe to numeric type where we could perform mathematical operations.
+
+```
+#CHANGING STRING TO NUMERIC
+DataFrame.Order_Demand = pd.to_numeric(DataFrame['Order_Demand'], errors='coerce')
+```
 ## References
 *In this section, provide links to your references and data sources.  For example:*
 - Source code was adapted from [the magic source code farm](http://www.amagicalnonexistentplace.com)
