@@ -311,6 +311,11 @@ for i in range(0,len(Warehouse)):
     print test_stationarity(diff_warehouse(Warehouse[i]).Order_Demand)
     
  ```
+
+![Image of Plot](https://github.com/IE-555/final-project-arima_forecasting_team/blob/master/images/Order_Demand_Whse_A.PNG)
+![Image of Plot](https://github.com/IE-555/final-project-arima_forecasting_team/blob/master/images/Order_Demand_Whse_J.PNG)
+![Image of Plot](https://github.com/IE-555/final-project-arima_forecasting_team/blob/master/images/Order_Demand_Whse_S.PNG)
+![Image of Plot](https://github.com/IE-555/final-project-arima_forecasting_team/blob/master/images/Order_Demand_Whse_C.PNG)
     
    
   
