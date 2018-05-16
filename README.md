@@ -183,7 +183,7 @@ for i in range(0, len(Warehouse)):
 ![Image of Plot](https://github.com/IE-555/final-project-arima_forecasting_team/blob/master/images/WH_A.PNG)
 
 
-
+![Image of Plot](https://github.com/IE-555/final-project-arima_forecasting_team/blob/master/images/WH_A.png)
 
 ![Image of Plot](https://github.com/IE-555/final-project-arima_forecasting_team/blob/master/images/WH_A.PNG)
 
