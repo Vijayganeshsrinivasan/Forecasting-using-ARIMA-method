@@ -1,4 +1,4 @@
-# FORECASTING OF ORDER DEMAND IN WAREHOUSE USING AUTOREGRESSIVE INTEGRATED MOVING AVERAGE
+# FORECASTING OF ORDER DEMAND IN WAREHOUSES USING AUTOREGRESSIVE INTEGRATED MOVING AVERAGE
 
 Authors:  **VIJAY GANESH SRINIVASAN**, **SOHIT REDDY KALLURU**, **RAMAKRISHNA POLEPEDDI**.
 
@@ -6,21 +6,53 @@ YouTube Video:  [Link](http://your_link_goes_here)
 
 ---
 
-**NOTE**:  For more details on the statistical  
+**NOTE**:  For more details on the statistical understanding of the project kindly read *Introduction to time series and forecasting
+Book by Peter J. Brockwell and Richard A. Davis, Production and Operations Analysis by Steven Nahmias and Supply Chain Engineering: Models and Applications by A. Ravi Ravindran, Donald P. Warsing, Jr.* 
 
 
 ---
 
-## Introduction
-*The purpose of this section is to provide some background about your project.  For example, your introduction should discuss*
-- *The purpose of your project;*
-- *The type of data you're using;*
-- *What you're doing with this data;*
-- *What types of analysis you're conducting;*
+## FORECASTING
 
-*Your introduction should make the reader excited to read the rest of this document.*
+![Image of Plot](images/samplefigure.png)
 
 ---
+
+## Project outline
+- The objective of the project is to forecast the order demand using AUTOREGRESSIVE INTEGRATED MOVING AVERAGE model for 4 warehouses respectively.
+- For this analysis we have downloaded the data from Kaggle. (https://www.kaggle.com/felixzhao/productdemandforecasting/data)
+- The basics of ACF, PACF, rolling mean average, rolling standard deviation and correlogram are explained in this documentation.
+- By the end of the documentation you'll have a clear idea about **A**utoregressive **I**ntegrated **M**oving **A**verage or **ARIMA** model, data visualization, data analysis, statistical library functions in python and creation of interactive plots using plotly.  
+
+---
+
+## What makes the dataset intersting
+- The dataset contains historical product demand for a manufacturing company with footprints globally. 
+- The company provides thousands of products within dozens of product categories for 7 years. There are four central warehouses to ship products within the region it is responsible for.
+- The data is available in the .csv format which allows us to perform the dataframe operations easily.
+
+---
+
+### NOTE : Packages to install before running this program
+
+### Plotly - Modern Visualization for the Data Era
+
+- It is one important package to be installed to have interactive plots. It is very easy to use.
+
+### Installing instructions
+
+- To install Plotly's python package, use the package manager pip inside your terminal.
+
+```
+$ pip install plotly 
+```
+- After installing plotly run python and configure plotly by entering your credentials.
+
+```
+import plotly
+plotly.tools.set_credentials_file(username='MyAccount', api_key='********')
+```
+- Use this hyperlink to create https://plot.ly/feed an account and to generate API key follow the instructions mentioned in the website. 
 
 ## References
 *In this section, provide links to your references and data sources.  For example:*
