@@ -322,7 +322,7 @@ Dickey-Fuller test for S warehouse
 ---
 
 - From the Dickey-Fuller test we can say that for warehouse S, there is trend and seasonality since the p-value is greater than 0.05 (the test statistic is more than the critical value). So we have to use the decompose function from the statistics library to perform this operation.
-- Below shown is the decomposition of a actual value graph.Time series decomposition works by splitting a time series into three components: seasonality, trends and random fluctiation.
+- Below shown is the decomposition of a actual value graph. Time series decomposition works by splitting a time series into three components: seasonality, trends and random fluctiation.
 
 ![Image of Plot](https://github.com/IE-555/final-project-arima_forecasting_team/blob/master/images/General_Explanation.PNG)
 
@@ -335,7 +335,7 @@ Dickey-Fuller test for S warehouse
    
 ### Significance of ACF and PACF
 
-- We use statsmodels to get the ACF and PACF plots.
+- statsmodels were used to get the ACF and PACF plots.
 - Below is the program coded in for loop so that it could generate ACF and PACF plots for all the warehouses.
 
 ```
