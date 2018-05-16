@@ -379,11 +379,116 @@ for i in range(0,len(Warehouse)):
 - Till this method, we have done the manual coding that involves each and every step of ARIMA modeling.
 - For reducing the steps and building the model easiily there is one algorithm called `auto arima`.
 - In the next section we will be seeing how `auto arima` and its functions work.
+- In the below model the data is separated into training data and testing data.
+- In this training data is used to train the model for forecasting and testing data is used to test the data against the build model.
+
+```
+for i in range(0,len(Warehouse)):
+    train = diff_warehouse(Warehouse[i]).iloc[0:int(len(diff_warehouse(Warehouse[i]))*0.7)]
+    test = diff_warehouse(Warehouse[i]).iloc[int(len(diff_warehouse(Warehouse[i]))*0.7)+1:]
+    print  '\n\n\n\n___________________________________________________________________________________________________________________________'
+    print color.BOLD  + '\n\n\t\t\t\t\t\t\t %s \n'% Warehouse[i] + color.END
+    stepwise_model = auto_arima(train.Order_Demand, start_p=1, start_q=1,max_p=3, max_q=3, m=25,
+                           start_P=0, seasonal=True,
+                           d=1, D=1, trace=True,
+                           error_action='ignore',  
+                           suppress_warnings=True, 
+                           stepwise=True,)
+    order_in = stepwise_model.order
+    seasonal_order_in = stepwise_model.seasonal_order
+    print'Least AIC ',stepwise_model.aic()
+    print'Least BIC ',stepwise_model.bic()
+```
+- p= order of the autoregressive part;
+- d= degree of first differencing involved;
+- q= order of the moving average part.
+- In the Auto Arima function (p, d, q) is the non-seasonal part of the model, (P, D, Q) is the seasonal part of the model, S is the number of periods per season.
+- We select these values based on AIC and BIC of the model. 
+
+**AIC**
+
+- The Akaike Information Critera (AIC) is a widely used measure of a statistical model. It basically quantifies the goodness of fit, the simplicity/parsimony, of the model into a single statistic.
+- When comparing two models, the one with the lower AIC is generally “better”
+- AIC= 2k-2ln(L) where, k corresponds to the number of estimated parameters in the model and L refers to the maximum value of the likelihood function for the model.
+- If the values of AIC and BIC are minimum then we select those values of (p, d, q) (P, D, Q)s.
+
+**Season Auto Integrated Moving Average**
+
+```
+mod = sm.tsa.statespace.SARIMAX(train.Order_Demand, trend='n', order=order_in , seasonal_order=seasonal_order_in,enforce_invertibility=False)
+results = mod.fit()
+print '\n\n\n',results.summary()
+```
+
+- Fits ARIMA models (including improved diagnostics) in a short command. It can also be used to perform regression with autocorrelated errors. This is a front end to arima() with a different back door.
 
 
+### Plotting diagnostics
 
 
+![Image of Plot](https://github.com/IE-555/final-project-arima_forecasting_team/blob/master/images/Diagnostic_S.PNG)
+
+
+- In the top right plot, we see that the red KDE line follows closely with the N(0,1) line (where N(0,1)) is the standard notation for a normal distribution with mean 0 and standard deviation of 1). This is a good indication that the residuals are normally distributed.
+- The qq-plot on the bottom left shows that the ordered distribution of residuals (blue dots) does follows the linear trend of the samples taken from a standard normal distribution with N(0, 1)
+
+## Final Forecasting
+
+```
+    print '\n\n\n\t\t\t\t\t\t Forecasting using trained model - 70% Data '
+    prediction_1 = results.get_forecast('2017-12')
+    prediction_1_ci = prediction_1.conf_int()
+    print(prediction_1.predicted_mean['2016-01':'2017-10'])
     
+    pred = prediction_1.predicted_mean['2016-01':'2017-10']
+ ```
+ - In the above snippet 70% train model is used to test and forecast more than 30% of data. 
+ - The forecasting graphs are attached for the reference. 
+    
+```   
+    print '\n\n\n\t\t\t\t\t\t Dataframe of Forecasting '
+    Prediction_df = pd.DataFrame(pred,columns=['ORDER_DEMAND_FORECAST'])
+    print Prediction_df
+```
+- The predictions results obtained were converted into dataframe using the above code.
+
+```
+    Given = go.Scatter(x=diff_warehouse(Warehouse[i]).index, y=diff_warehouse(Warehouse[i]).Order_Demand, mode = 'lines+markers',name = 'Order_Demand'+ Warehouse[i])
+    Predicted=go.Scatter(x=Prediction_df.index, y=Prediction_df.ORDER_DEMAND_FORECAST, mode = 'lines+markers',name = 'Predicted_Order_Demand'+ Warehouse[i])
+    #Actual = go.Scatter(x=WH_A_ALLYEARS_FO.index, y=WH_A_ALLYEARS_FO.Order_Demand, mode = 'lines+markers',name = 'Actual')
+    Final_Visu =[Given,Predicted]
+    layout = go.Layout(
+    title='Forecasted Order Demand for ' + Warehouse[i],
+    xaxis=dict(
+        title='Years',
+        titlefont=dict(
+            family='Courier New, monospace',
+            size=18,
+            color='#7f7f7f'
+        )
+    ),
+    yaxis=dict(
+        title='Order Demand',
+        titlefont=dict(
+            family='Courier New, monospace',
+            size=18,
+            color='#7f7f7f'
+        )
+    )
+)
+    Visu = go.Figure(data=Final_Visu, layout=layout)
+    print plot(Visu, filename='styling-names')
+```
+- The above snippet is a `for` loop construction used to display all the forecasts of warehouses after a single block of code. 
+
+![Image of Plot](https://github.com/IE-555/final-project-arima_forecasting_team/blob/master/images/FC_WA_A.PNG)
+![Image of Plot](https://github.com/IE-555/final-project-arima_forecasting_team/blob/master/images/FC_WA_C.PNG)
+![Image of Plot](https://github.com/IE-555/final-project-arima_forecasting_team/blob/master/images/FC_WA_J.PNG)
+![Image of Plot](https://github.com/IE-555/final-project-arima_forecasting_team/blob/master/images/FC_WA_S.PNG)
+
+
+
+
 - 
 ## References
 *In this section, provide links to your references and data sources.  For example:*
