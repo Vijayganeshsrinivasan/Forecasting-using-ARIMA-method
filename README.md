@@ -335,8 +335,8 @@ Dickey-Fuller test for S warehouse
    
 ### Significance of ACF and PACF
 
-- statsmodels were used to get the ACF and PACF plots.
-- Below is the program coded in for loop so that it could generate ACF and PACF plots for all the warehouses.
+- The `statsmodels` were used to get the ACF and PACF plots.
+- Below is the program coded in `for` loop so that it could generate ACF and PACF plots for all the warehouses.
 
 ```
 from statsmodels.graphics.tsaplots import plot_acf
@@ -477,7 +477,7 @@ print '\n\n\n',results.summary()
 ```
 - The above snippet is a `for` loop construction used to display all the forecasts of warehouses after a single block of code. 
 
-## Results from your Analysis
+## Results from analysis
 
 ![Image of Plot](https://github.com/IE-555/final-project-arima_forecasting_team/blob/master/images/FC_WA_A.PNG)
 ![Image of Plot](https://github.com/IE-555/final-project-arima_forecasting_team/blob/master/images/FC_WA_C.PNG)
@@ -489,10 +489,25 @@ print '\n\n\n',results.summary()
 
 - 
 ## References
-*In this section, provide links to your references and data sources.  For example:*
-- Source code was adapted from [the magic source code farm](http://www.amagicalnonexistentplace.com)
-- The code retrieves data from [the organization for hosting cool data](http://www.anothermagicalnonexistentplace.com)
-- The forecasting models were modified from [some academic research paper](http://www.linktotheacademicpaperyouused.com)
+*The references are given in the structure of program.
+- Kindly [watch this Youtube video](https://www.youtube.com/watch?v=Aw77aMLj9uM) to know how ARIMA works.
+- For primary data analysis [click here].(https://www.bigskyassociates.com/blog/bid/372186/The-Data-Analysis-Process-5-Steps-To-Better-Decision-Making)
+- On the information of how to clean the data [click here](http://chi2innovations.com/blog/discover-data-blog-series/how-clean-your-data-quickly-5-steps/)
+- To learn about basic data pre-processing [click here](http://iasri.res.in/ebook/win_school_aa/notes/Data_Preprocessing.pdf)
+- To learn the statistical concepts of time series and forecasting [click here](https://www.researchgate.net/file.PostFileLoader.html?id=55502f915f7f71d7a68b45df&assetKey=AS%3A273774321045510%401442284292820)
+- To know about selecting particular data for rows and columns from pandas dataframe [click here](https://stackoverflow.com/questions/17071871/select-rows-from-a-dataframe-based-on-values-in-a-column-in-pandas)
+- Why to go with [regression model](https://dss.princeton.edu/online_help/analysis/regression_intro.htm)
+- What is [linear regression](https://www.statisticallysignificantconsulting.com/RegressionAnalysis.htm)
+- To know [how to plot graph between 2 columns](https://stackoverflow.com/questions/17812978/how-to-plot-two-columns-of-a-pandas-data-frame-using-points)
+- To know [how to change the pandas object to numeric](https://stackoverflow.com/questions/40095712/when-to-applypd-to-numeric-and-when-to-astypenp-float64-in-python)
+- To learn about time series plots from plotly [click here](https://plot.ly/python/time-series/)
+- To learn about normalizing one column in a dataframe [click here](https://stackoverflow.com/questions/28576540/how-can-i-normalize-the-data-in-a-range-of-columns-in-my-pandas-dataframe)
+- Click to know [how to drop Nan objects in pandas dataframe](https://stackoverflow.com/questions/36370839/better-way-to-drop-nan-rows-in-pandas)
+- To know about `groupby` and finding mean [click here](https://stackoverflow.com/questions/30482071/how-to-calculate-mean-values-grouped-on-another-column-in-pandas)
+- **To know how to use offline plots in plotly [click here]**(https://stackoverflow.com/questions/35315726/visualize-plotly-charts-in-spyder)
+- To learn about moving average [click here](https://www.investopedia.com/ask/answers/013015/what-are-main-advantages-and-disadvantages-using-simple-moving-average-sma.asp)
+- 
+
 
 
 ## How to Run the Code
@@ -514,6 +529,3 @@ print '\n\n\n',results.summary()
 - *NOTE: You are welcome to provide instructions using Anaconda, IPython, or Jupyter notebooks.*
 
 ---
-
-## Results from your Analysis
-*Last, but not least, you need to demonstrate your results.  You should include figures and/or tables of results.  What worked well?  What could be improved?*
