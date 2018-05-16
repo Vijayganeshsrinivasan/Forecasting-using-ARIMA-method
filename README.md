@@ -26,7 +26,7 @@ Book by Peter J. Brockwell and Richard A. Davis, Production and Operations Analy
 
 ---
 
-## What makes the dataset intersting
+## What makes the dataset interesting
 - The dataset contains historical product demand for a manufacturing company with footprints globally. 
 - The company provides thousands of products within dozens of product categories for 7 years. There are four central warehouses to ship products within the region it is responsible for.
 - The data is available in the .csv format which allows us to perform the dataframe operations easily.
