@@ -15,7 +15,7 @@ Book by Peter J. Brockwell and Richard A. Davis, Production and Operations Analy
 ## FORECASTING
 
 ![Image of Plot](images/Forecasting_Title_Image.png)
-
+![Image of Plot](images/samplefigure.png)
 ---
 
 ## Project outline
