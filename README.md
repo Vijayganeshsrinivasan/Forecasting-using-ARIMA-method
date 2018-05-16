@@ -178,11 +178,11 @@ for i in range(0, len(Warehouse)):
     py.iplot(fig, filename='stacked-subplots', layout=layout)
     plot(fig, filename='stacked-subplots')
   ```
-![Image of Plot](https://github.com/IE-555/final-project-arima_forecasting_team/blob/master/images/Steps_ARIMA_FORECASTING.PNG)
-![Image of Plot](https://github.com/IE-555/final-project-arima_forecasting_team/blob/master/images/Steps_ARIMA_FORECASTING.PNG)
-![Image of Plot](https://github.com/IE-555/final-project-arima_forecasting_team/blob/master/images/Steps_ARIMA_FORECASTING.PNG)
-![Image of Plot](https://github.com/IE-555/final-project-arima_forecasting_team/blob/master/images/Steps_ARIMA_FORECASTING.PNG)
-![Image of Plot](https://github.com/IE-555/final-project-arima_forecasting_team/blob/master/images/Steps_ARIMA_FORECASTING.PNG)
+![Image of Plot](https://github.com/IE-555/final-project-arima_forecasting_team/blob/master/images/WH_A.PNG)
+![Image of Plot](https://github.com/IE-555/final-project-arima_forecasting_team/blob/master/images/WH_J.PNG)
+![Image of Plot](https://github.com/IE-555/final-project-arima_forecasting_team/blob/master/images/WH_S.PNG)
+![Image of Plot](https://github.com/IE-555/final-project-arima_forecasting_team/blob/master/images/WH_C.PNG)
+
 ## References
 *In this section, provide links to your references and data sources.  For example:*
 - Source code was adapted from [the magic source code farm](http://www.amagicalnonexistentplace.com)
