@@ -398,7 +398,7 @@ for i in range(0,len(Warehouse)):
 - p= order of the autoregressive part;
 - d= degree of first differencing involved;
 - q= order of the moving average part.
-- In the Auto Arima function (p, d, q) is the non-seasonal part of the model, (P, D, Q) is the seasonal part of the model, S is the number of periods per season.
+- In the Auto Arima function (p, d, q) is the non-seasonal part of the model, (P, D, Q) is the seasonal part of the model, m is the number of periods per season.
 - We select these values based on AIC and BIC of the model. 
 
 **AIC**
@@ -406,9 +406,9 @@ for i in range(0,len(Warehouse)):
 - The Akaike Information Critera (AIC) is a widely used measure of a statistical model. It basically quantifies the goodness of fit, the simplicity/parsimony, of the model into a single statistic.
 - When comparing two models, the one with the lower AIC is generally “better”
 - AIC= 2k-2ln(L) where, k corresponds to the number of estimated parameters in the model and L refers to the maximum value of the likelihood function for the model.
-- If the values of AIC and BIC are minimum then we select those values of (p, d, q) (P, D, Q)s.
+- If the values of AIC and BIC are minimum then we select those values of (p, d, q) (P, D, Q)m.
 
-**Season Auto Integrated Moving Average**
+**Seasonal Auto Integrated Moving Average**
 
 ```
 mod = sm.tsa.statespace.SARIMAX(train.Order_Demand, trend='n', order=order_in , seasonal_order=seasonal_order_in,enforce_invertibility=False)
