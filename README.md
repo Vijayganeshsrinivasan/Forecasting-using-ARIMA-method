@@ -477,6 +477,8 @@ print '\n\n\n',results.summary()
 ```
 - The above snippet is a `for` loop construction used to display all the forecasts of warehouses after a single block of code. 
 
+## Results from your Analysis
+
 ![Image of Plot](https://github.com/IE-555/final-project-arima_forecasting_team/blob/master/images/FC_WA_A.PNG)
 ![Image of Plot](https://github.com/IE-555/final-project-arima_forecasting_team/blob/master/images/FC_WA_C.PNG)
 ![Image of Plot](https://github.com/IE-555/final-project-arima_forecasting_team/blob/master/images/FC_WA_J.PNG)
