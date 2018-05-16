@@ -14,7 +14,7 @@ Book by Peter J. Brockwell and Richard A. Davis, Production and Operations Analy
 
 ## FORECASTING
 
-![Image of Plot](images/samplefigure.png)
+![Image of Plot](images/Forecasting_Title_Image.png)
 
 ---
 
@@ -54,21 +54,15 @@ plotly.tools.set_credentials_file(username='MyAccount', api_key='********')
 ```
 - Use this hyperlink to create https://plot.ly/feed an account and to generate API key follow the instructions mentioned in the website. 
 
+---
+
+## Why ARIMA
 ## References
 *In this section, provide links to your references and data sources.  For example:*
 - Source code was adapted from [the magic source code farm](http://www.amagicalnonexistentplace.com)
 - The code retrieves data from [the organization for hosting cool data](http://www.anothermagicalnonexistentplace.com)
 - The forecasting models were modified from [some academic research paper](http://www.linktotheacademicpaperyouused.com)
 
----
-
-## Requirements
-*In this section, provide detailed instructions for installing any necessary pre-requisites.  This could include:*
-- *Python packages/libraries;*
-- *API keys;*
-- *etc.*
-
----
 
 ## Explanation of the Code
 *In this section you should provide a more detailed explanation of what, exactly, your Python script(s) actually do.  Your classmates should be able to read your explanation and understand what is happening in the code.*
