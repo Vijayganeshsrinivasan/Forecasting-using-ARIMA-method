@@ -56,7 +56,18 @@ plotly.tools.set_credentials_file(username='MyAccount', api_key='********')
 
 ---
 
-## Why ARIMA
+## 5 Steps towards Forecasting
+
+![Image of Plot](https://github.com/IE-555/final-project-arima_forecasting_team/blob/master/images/Forecasting_Title_Image.PNG)
+---
+## Introduction to ARIMA
+
+- ARIMA is a forecasting technique. ARIMA– Auto Regressive Integrated Moving Average the key tool in Time Series Analysis.
+- Models that relate the present value of a series to past values and past prediction errors - these are called ARIMA models.
+- The AR part of ARIMA indicates that the evolving variable of interest is regressed on its own lagged (i.e., prior) values. The MA part indicates that the regression error is actually a linear combination of error terms whose values occurred contemporaneously and at various times in the past. The I (for "integrated") indicates that the data values have been replaced with the difference between their values and the previous values (and this differencing process may have been performed more than once). The purpose of each of these features is to make the model fit the data as well as possible.(Wikipedia)
+
+## 
+
 ## References
 *In this section, provide links to your references and data sources.  For example:*
 - Source code was adapted from [the magic source code farm](http://www.amagicalnonexistentplace.com)
