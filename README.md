@@ -329,11 +329,60 @@ Dickey-Fuller test for S warehouse
 - Below shown is the decomposition of a actual value graph.Time series decomposition works by splitting a time series into three components: seasonality, trends and random fluctiation.
 
 ![Image of Plot](https://github.com/IE-555/final-project-arima_forecasting_team/blob/master/images/General_Explanation.PNG)
+
+
 **Above image courtesy: https://anomaly.io/seasonal-trend-decomposition-in-r/
+
+
 
 ![Image of Plot](https://github.com/IE-555/final-project-arima_forecasting_team/blob/master/images/WH_S_Seasonality.PNG)
    
-  
+### Significance of ACF and PACF
+
+- We use statsmodels to get the ACF and PACF plots.
+- Below is the program coded in for loop so that it could generate ACF and PACF plots for all the warehouses.
+
+```
+from statsmodels.graphics.tsaplots import plot_acf
+from statsmodels.graphics.tsaplots import plot_pacf
+
+for i in range(0,len(Warehouse)):
+    plot_acf(diff_warehouse(Warehouse[i]).Order_Demand)
+    print '\n\n\n\n___________________________________________________________________________________________________________________________'
+    print color.BOLD  + '\n\n\t\t\t\t\t\t\t %s \n'% Warehouse[i] + color.END
+    plt.show()
+    plot_pacf(diff_warehouse(Warehouse[i]).Order_Demand)
+    plt.show()
+```
+
+
+
+
+**Autocorrelation Function (ACF)**
+- It is a measure of the correlation between the time series with a lagged version of itself. 
+- q – The lag value where the ACF chart crosses the upper confidence interval for the first time.
+- Below the ACF plot for warehouse S
+
+
+![Image of Plot](https://github.com/IE-555/final-project-arima_forecasting_team/blob/master/images/ACF_S.PNG)
+
+
+**Partial Autocorrelation Function (PACF)** 
+- This measures the correlation between the time series with a lagged version of itself but after eliminating the variations already explained by the intervening comparisons. 
+- p – The lag value where the PACF chart crosses the upper confidence interval for the first time.
+- Below the PACF plot for warehouse S
+
+
+
+![Image of Plot](https://github.com/IE-555/final-project-arima_forecasting_team/blob/master/images/PACF_S.PNG)
+
+- Till this method, we have done the manual coding that involves each and every step of ARIMA modeling.
+- For reducing the steps and building the model easiily there is one algorithm called `auto arima`.
+- In the next section we will be seeing how `auto arima` and its functions work.
+
+
+
+
     
 - 
 ## References
