@@ -177,10 +177,20 @@ for i in range(0, len(Warehouse)):
             color='#7f7f7f')))
     py.iplot(fig, filename='stacked-subplots', layout=layout)
     plot(fig, filename='stacked-subplots')
-  ```
+
+```
+
 ![Image of Plot](https://github.com/IE-555/final-project-arima_forecasting_team/blob/master/images/WH_A.PNG)
+
+
+
+
+![Image of Plot](https://github.com/IE-555/final-project-arima_forecasting_team/blob/master/images/WH_A.PNG)
+
 ![Image of Plot](https://github.com/IE-555/final-project-arima_forecasting_team/blob/master/images/WH_J.PNG)
+
 ![Image of Plot](https://github.com/IE-555/final-project-arima_forecasting_team/blob/master/images/WH_S.PNG)
+
 ![Image of Plot](https://github.com/IE-555/final-project-arima_forecasting_team/blob/master/images/WH_C.PNG)
 
 ## References
