@@ -504,7 +504,7 @@ print '\n\n\n',results.summary()
 - To learn about normalizing one column in a dataframe [click here](https://stackoverflow.com/questions/28576540/how-can-i-normalize-the-data-in-a-range-of-columns-in-my-pandas-dataframe)
 - Click to know [how to drop Nan objects in pandas dataframe](https://stackoverflow.com/questions/36370839/better-way-to-drop-nan-rows-in-pandas)
 - To know about `groupby` and finding mean [click here](https://stackoverflow.com/questions/30482071/how-to-calculate-mean-values-grouped-on-another-column-in-pandas)
-- **To know how to use offline plots in plotly [click here]**(https://stackoverflow.com/questions/35315726/visualize-plotly-charts-in-spyder)
+- **To know how to use offline plots in plotly [click here](https://stackoverflow.com/questions/35315726/visualize-plotly-charts-in-spyder)**
 - To learn about moving average [click here](https://www.investopedia.com/ask/answers/013015/what-are-main-advantages-and-disadvantages-using-simple-moving-average-sma.asp)
 - For more information [contact](vs58@buffalo.edu) us.
 
