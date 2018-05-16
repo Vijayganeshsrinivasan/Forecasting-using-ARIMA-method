@@ -215,7 +215,7 @@ def diff_warehouse(Whse_A):
     WH_A_ALLYEARS = WH_A_ALLYEARS.set_index('Month')
     
   ```
-  - In the next hald of the function the moving average is calculated. ARIMA methodology also allows models to be built that incorporate both autoregressive and moving average parameters together. So that we calculate moving average too, or in python langauge we calculate rolling average for all the years in the same function.
+  - In the next half of the function the moving average is calculated. ARIMA methodology also allows models to be built that incorporate both autoregressive and moving average parameters together. So that we calculate moving average too, or in python langauge we calculate rolling average for all the years in the same function.
   
   ```
    #ROLLING AVERGAGE FORMULA - TRIAL WITH MOVING WINDOW
