@@ -493,40 +493,6 @@ print '\n\n\n',results.summary()
 - The forecasting models were modified from [some academic research paper](http://www.linktotheacademicpaperyouused.com)
 
 
-## Explanation of the Code
-*In this section you should provide a more detailed explanation of what, exactly, your Python script(s) actually do.  Your classmates should be able to read your explanation and understand what is happening in the code.*
-
-The code, `needs_a_good_name.py`, begins by importing necessary Python packages:
-```
-import matplotlib.pyplot as plt
-```
-
-- *NOTE:  If a package does not come pre-installed with Anaconda, you'll need to provide instructions for installing that package here.*
-
-We then import data from [insert name of data source].  We print the data to allow us to verify what we've imported:
-```
-x = [1, 3, 4, 7]
-y = [2, 5, 1, 6]
-
-for i in range(0,len(x)):
-	print "x[%d] = %f" % (i, x[i])		
-```
-- *NOTE 1:  This sample code doesn't actually import anything.  You'll need your code to grab live data from an online source.*  
-- *NOTE 2:  You will probably also need to clean/filter/re-structure the raw data.  Be sure to include that step.*
-
-Finally, we visualize the data.  We save our plot as a `.png` image:
-```
-plt.plot(x, y)
-plt.savefig('samplefigure.png')	
-plt.show()
-```
-
-The output from this code is shown below:
-
-![Image of Plot](images/samplefigure.png)
-
----
-
 ## How to Run the Code
 *Provide step-by-step instructions for running the code.  For example, I like to run code from the terminal:*
 1. Ensure that you have registered for the [insert name of API] API key.  (You may reference the instructions for doing this.)
