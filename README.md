@@ -52,7 +52,7 @@ $ pip install plotly
 import plotly
 plotly.tools.set_credentials_file(username='MyAccount', api_key='********')
 ```
-- Use this hyperlink to create https://plot.ly/feed an account and to generate API key follow the instructions mentioned in the website. 
+- Use [this hyperlink](https://plot.ly/feed) to create  an account and to generate API key follow the instructions mentioned in the website. 
 
 ---
 
